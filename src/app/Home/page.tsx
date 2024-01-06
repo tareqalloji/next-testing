@@ -6,7 +6,7 @@ import { AuthCheck } from "./AuthCheck";
 import FilterForm from "./_components/FilterForm";
 import ProductCard from "./_components/ProductCard";
 
-const page = () => {
+const Home = () => {
   const [rating, setRating]: any = useState([]);
   const product = Get();
   const NewRating: any = [];
@@ -31,4 +31,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Home;

@@ -17,7 +17,7 @@ import { useState } from "react";
 import { BsTrashFill } from "react-icons/bs";
 import { AuthCheck } from "../AuthCheck";
 
-const page = () => {
+const OrderPage = () => {
   const [selected, setSelected] = useState(undefined);
   const orders = Get();
   const deleteOrder = Delete();
@@ -80,4 +80,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default OrderPage;

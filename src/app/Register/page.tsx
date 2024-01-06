@@ -6,7 +6,7 @@ import { useFormik } from "formik";
 import Image from "next/image";
 import Link from "next/link";
 import * as yup from "yup";
-export default function page() {
+export default function RegisterPage() {
   const register = Register();
   const validationSchema = yup.object({
     name: yup.string().required("Name is required"),

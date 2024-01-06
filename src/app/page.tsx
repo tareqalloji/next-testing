@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { Login } from "@/Hooks/useAuth";
-export default function page() {
+export default function LoginPage() {
   const login = Login();
   const validationSchema = yup.object({
     email: yup
