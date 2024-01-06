@@ -7,16 +7,14 @@ const Login = () => {
   return useMutation({
     mutationFn: async (values: any) => {
       try {
-        await APIInstance.Login(values).then((res) => {
+        await APIInstance.Login(values).then(async (res) => {
           sessionStorage.setItem("token", res.data.data.token);
+          toast.success("Hello there!");
+          await router.push("/Home");
         });
       } catch (err: any) {
         toast.error(err.response.data.message);
       }
-    },
-    onSuccess: async (res: any) => {
-      toast.success("Hello there!");
-      return await router.push("/Home");
     },
   });
 };
@@ -25,16 +23,14 @@ const Register = () => {
   return useMutation({
     mutationFn: async (values: any) => {
       try {
-        await APIInstance.Register(values).then((res) => {
+        await APIInstance.Register(values).then(async (res) => {
           sessionStorage.setItem("token", res.data.data.token);
+          toast.success("Welcome to our shop, Enjoy!!");
+          await router.push("/Home");
         });
       } catch (err: any) {
         toast.error(err.response.data.message);
       }
-    },
-    onSuccess: async (res: any) => {
-      toast.success("Welcome to our shop, Enjoy!!");
-      return await router.push("/Home");
     },
   });
 };
